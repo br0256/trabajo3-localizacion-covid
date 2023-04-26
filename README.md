@@ -1,4 +1,4 @@
-:point_right: [![SonarCloud](https://github.com/br0256/trabajo3-localizacion-covid/actions/workflows/main.yml/badge.svg)](https://github.com/br0256/trabajo3-localizacion-covid/actions/workflows/main.yml)
+:point_right:[![SonarCloud](https://github.com/br0256/trabajo3-localizacion-covid/actions/workflows/main.yml/badge.svg)](https://github.com/br0256/trabajo3-localizacion-covid/actions/workflows/main.yml)
 
 # EMS-lab3 Maintainability
 
