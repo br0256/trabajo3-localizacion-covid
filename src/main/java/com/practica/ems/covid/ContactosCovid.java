@@ -112,7 +112,7 @@ public class ContactosCovid {
 			/**
 			 * Lectura del fichero	línea a línea. Compruebo que cada línea 
 			 * tiene el tipo PERSONA o LOCALIZACION y cargo la línea de datos en la 
-			 * lista correspondiente. Sino viene ninguno de esos tipos lanzo una excepción
+			 * lista correspondiente Sino viene ninguno de esos tipos lanzo una excepción
 			 */
 
 
