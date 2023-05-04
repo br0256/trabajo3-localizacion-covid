@@ -73,13 +73,13 @@ public class ContactosCovid {
 				throw new EmsInvalidTypeException();
 			}
 			if (datos[0].equals("PERSONA")) {
-				if (datos.length != Constantes.maxpersonas) {
+				if (datos.length != Constantes.MAX_DATOS_PERSONAS) {
 					throw new EmsInvalidNumberOfDataException("El número de datos para PERSONA es menor de 8");
 				}
 				this.poblacion.addPersona(this.crearPersona(datos));
 			}
 			if (datos[0].equals("LOCALIZACION")) {
-				if (datos.length != Constantes.maxlocalizacion) {
+				if (datos.length != Constantes.MAX_DATOS_LOCALIZACION) {
 					throw new EmsInvalidNumberOfDataException("El número de datos para LOCALIZACION es menor de 6");
 				}
 				PosicionPersona pp = this.crearPosicionPersona(datos);
@@ -125,7 +125,7 @@ public class ContactosCovid {
 
 					if (datos[0].equals("PERSONA")) {
 
-						if (datos.length != Constantes.maxpersonas) {
+						if (datos.length != Constantes.MAX_DATOS_PERSONAS) {
 							throw new EmsInvalidNumberOfDataException("El número de datos para PERSONA es menor de 8");
 						}
 						this.poblacion.addPersona(this.crearPersona(datos));
@@ -133,7 +133,7 @@ public class ContactosCovid {
 
 					if (datos[0].equals("LOCALIZACION")) {
 
-						if (datos.length != Constantes.maxlocalizacion) {
+						if (datos.length != Constantes.MAX_DATOS_LOCALIZACION) {
 							throw new EmsInvalidNumberOfDataException(
 									"El número de datos para LOCALIZACION es menor de 6");
 						}
@@ -224,7 +224,7 @@ public class ContactosCovid {
 
 	private Persona crearPersona(String[] data) {
 		Persona persona = new Persona();
-		for (int i = 1; i < Constantes.maxpersonas; i++) {
+		for (int i = 1; i < Constantes.MAX_DATOS_PERSONAS; i++) {
 			String s = data[i];
 			switch (i) {
 			case 1:
@@ -257,7 +257,7 @@ public class ContactosCovid {
 		PosicionPersona posicionPersona = new PosicionPersona();
 		String fecha = null, hora;
 		float latitud = 0, longitud;
-		for (int i = 1; i < Constantes.maxlocalizacion; i++) {
+		for (int i = 1; i < Constantes.MAX_DATOS_LOCALIZACION; i++) {
 			String s = data[i];
 			switch (i) {
 			case 1:
