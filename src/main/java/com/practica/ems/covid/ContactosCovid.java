@@ -68,10 +68,10 @@ public class ContactosCovid {
 		String datas[] = dividirEntrada(data);
 		for (String linea : datas) {
 			String datos[] = this.dividirLineaData(linea);
-			Comprobaciones(datos);
+			comprobaciones(datos);
 		}
 	}
-	public void Comprobaciones(String datos[])throws EmsInvalidTypeException, EmsInvalidNumberOfDataException,
+	public void comprobaciones(String datos[])throws EmsInvalidTypeException, EmsInvalidNumberOfDataException,
 			EmsDuplicatePersonException, EmsDuplicateLocationException{
 		if (!datos[0].equals("PERSONA") && !datos[0].equals("LOCALIZACION")) {
 			throw new EmsInvalidTypeException();
@@ -121,7 +121,7 @@ public class ContactosCovid {
 
 			while ((data = br.readLine()) != null) {
 					String datos[] = this.dividirLineaData(data);
-					Comprobaciones(datos);
+					comprobaciones(datos);
 				}
 		} catch (Exception e) {
 			e.printStackTrace();
