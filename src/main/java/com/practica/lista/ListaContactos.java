@@ -12,7 +12,7 @@ public class ListaContactos {
 	 * En la lista de coordenadas metemos el documento de la persona que está en esa coordenada 
 	 * en un instante 
 	 */
-	public void añadirNodotemporal(NodoTemporal n, PosicionPersona p){
+	public void anadirNodotemporal(NodoTemporal n, PosicionPersona p){
 		NodoPosicion npActual = n.getListaCoordenadas();
 		NodoPosicion npAnt=null;
 		boolean npEncontrado = false;
@@ -48,7 +48,7 @@ public class ListaContactos {
 				/**
 				 * Insertamos en la lista de coordenadas
 				 */
-				añadirNodotemporal(aux,p);
+				anadirNodotemporal(aux,p);
 			}else if(aux.getFecha().compareTo(p.getFechaPosicion())<0) {
 				ant = aux;
 				aux=aux.getSiguiente();
@@ -63,7 +63,7 @@ public class ListaContactos {
 		if(!encontrado) {
 			NodoTemporal nuevo = new NodoTemporal();
 			nuevo.setFecha(p.getFechaPosicion());
-			añadirNodotemporal(nuevo,p);
+			anadirNodotemporal(nuevo,p);
 			
 			if(ant!=null) {
 				nuevo.setSiguiente(aux);
