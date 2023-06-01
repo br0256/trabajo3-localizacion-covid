@@ -20,6 +20,7 @@ public class Persona {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 
+
 	public String getNombre() {
 		return nombre;
 	}
